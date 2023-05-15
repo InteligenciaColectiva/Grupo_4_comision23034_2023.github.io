@@ -1,8 +1,53 @@
-/*  Luis Caraballo
-* 	Menu responsive 
-*	v1.0
+/*  Menu responsive 
+*	v2.0
 *   comision 23034 Team 4 año 2023
 */
+
+.lbl-menu{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+	transform: scale(1.2);
+}
+
+.lbl-menu #spn1,#spn2,#spn3{
+    position: absolute;
+    content: '';
+    background-color: #4E94AB;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn2{
+    top: 12px;
+}
+
+#spn3{
+    top: 23px;
+}
+
+#btn-menu{
+    display: none;
+}
+
+#btn-menu:checked ~ .lbl-menu #spn1{
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked ~ .lbl-menu #spn2{
+    opacity: 0;
+}
+
+#btn-menu:checked ~ .lbl-menu #spn3{
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+
 
 
 
@@ -14,7 +59,6 @@ background: #4E94AB;
 
 #btn-menu{
 display: none;
-
 }
 
 header label{
@@ -31,26 +75,26 @@ background: rgba(0, 0, 0, 0.3)
 
 }
 
-.menu ul{
-margin: 0;
-list-style: none;
-padding: 0;
-display: flex;
-
+.menu{
+    position: fixed;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-.menu li{
-border-right: 1px solid #fff;
 
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li{
+    border-right: 1px solid #fff;
 }
 
 
 .menu li:hover{
-background: rgba(0, 0, 0, 3);
-
+    background-color: rgba(0, 0, 0, 3);
 }
-
-
-
 
 
 .menu li a{
@@ -59,34 +103,36 @@ padding: 15px 20px;
 color: #fff;
 text-decoration: none;
 }
+
 main{
     padding: 20px ;
 }
 
-@media (max-width:768px) 
-{
-header label{
-display: block;}
-    .menu
-    {
+@media (max-width:768px){
+    header label{
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .menu{
         position: absolute;
         background: #4E94AB;
         width: 70%;
-        margin-left: -70%;
+        margin-left: -80%;
         transition: all 0.5s;
     }
 
-    .menu ul 
-    {
+    .menu ul{
         flex-direction: column;
     }
-    .menu li 
-    {
-       border-top: 1px solid #fff; 
+
+    .menu li{
+        border-top: 1px solid #fff; 
     }
+
     #btn-menu:checked ~ .menu{
         margin: 0;
-
     }
 }
 
