@@ -1,0 +1,107 @@
+.nuestro-servicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.nuestro-servicio h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    margin: 40px 20px;
+    text-align: center;
+    width: 27%;
+    font-size: 2rem;
+    color: #4E94AB;
+}
+
+.nuestro-servicio ul {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 10px 10px 40px 10px;
+    list-style: none;
+}
+
+.nuestro-servicio ul li {
+    padding: 5px;
+}
+
+
+.cont-img {
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    margin: auto;
+    color: #FFFFFF;
+    text-align: center;
+    width: 60%;
+
+
+    /* background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/fondo2.jpg);
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/fondo2.jpg);
+    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/fondo2.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; */
+}
+
+.carta:first-child {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    box-shadow: rgb(45, 44, 44);
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak444.png);
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak444.png);
+    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak444.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bak444.png); 
+
+}
+
+.carta:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    box-shadow: gray;
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak33.png);
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak33.png);
+    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak33.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bak33.png);
+}
+
+.carta:nth-child(3) {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    box-shadow: gray;
+    background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak11.png);
+    background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak11.png);
+    background-image: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/bak11.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bak11.png); 
+}

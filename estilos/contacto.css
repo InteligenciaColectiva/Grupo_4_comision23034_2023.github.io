@@ -1,0 +1,208 @@
+.contacto{
+    height: 100%;
+    padding-bottom: 50px;
+} 
+
+#titulo {
+    font-size: 2rem;
+    color: #4E94AB;
+    padding-top: 55px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#lista-contacto {
+    text-align: center;
+    padding: 12px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+#lista-contacto li {
+    padding: 6px;
+    margin-bottom: 5px
+}
+
+#lista-contacto li a {
+    text-decoration: none;
+}
+
+/* ----------------- Formulario -------------- */
+.formulario {
+    padding: 2rem;
+    border: 1px solid #aaaaaa;
+    border-radius: 0.5rem;
+    width: 40%;
+    margin: 3.125rem auto 3rem auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    color: rgb(94, 94, 94);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    display: block;
+    padding: 17px 25px;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 15px;
+    background-color: rgba(226, 241, 246, 0.1);
+    border: none;
+    border-bottom: 1px solid #d2d2d2;
+    color: rgba(71, 71, 71, 0.767);
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(79, 78, 80, 0.7);
+}
+
+.form-control input:focus{
+    outline: 0;
+    border-color: #808080;
+}
+
+/* ------------ Validacion -----------------*/
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control i{
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small{
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.formulario button {
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    height: 47px;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgb(158, 160, 161), rgb(201, 201, 196));
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(188, 240, 234));
+}
+
+
+@media(max-width: 991px) {
+    #form {
+        padding: 50px 30px;
+        width: 60%;
+    }
+
+    input {
+        padding: 15px;
+    }
+} 
+
+
+/* --------------Sucursal------------- */
+
+.seccion-sucursal{
+    background-image: url("../img/banner2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center;
+    margin-top: 40px;
+}
+.sucursal {  
+    display: grid;
+    gap: 20px;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.sucursal h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #4E94AB;
+}
+
+.cont-mapa {
+    margin: auto;
+    margin-bottom: 40px;
+    align-items: center;
+    padding: 30px;
+}
+
+.cont-mapa p{
+    margin: auto;
+    text-align: center;
+}
+
+/* -------------- Estilos Footer ------------- */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(45deg,
+      rgb(252, 252, 252) 0%,
+      rgb(188, 204, 210) 25%,
+      rgb(89, 156, 178) 67%);
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.9);
+}

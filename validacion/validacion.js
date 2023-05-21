@@ -5,55 +5,67 @@ const email = document.getElementById('email');
 const mensaje = document.getElementById('mensaje');
 
 form.addEventListener('submit', e => {
-    e.preventDefault();
-    checkImputs();
+    e.preventDefault()
+    checkImputs()
 });
 
-function checkImputs(){
+function checkImputs() {
     const nombreValue = nombre.value.trim();
     const telefonoValue = telefono.value.trim();
     const emailValue = email.value.trim();
     const mensajeValue = mensaje.value.trim();
 
-    if(nombreValue === ''){
+    if (nombreValue === '') {
         campoInvalido(nombre, 'No puede dejar este campo vacio.');
-    }else{
+    } else if (!esNombre(nombreValue)) {
+        campoInvalido(nombre, 'Se ingresaron caracteres invalidos');
+    } else {
         campoValido(nombre);
     }
 
-    if(telefonoValue === ''){
+    if (telefonoValue === '') {
         campoInvalido(telefono, 'No puede dejar este campo vacio.');
-    }else{
+    } else if (!esTelefono(telefonoValue)) {
+        campoInvalido(telefono, 'Debe contener entre 8 y 14 digitos numéricos');
+    } else {
         campoValido(telefono);
     }
 
-    if(emailValue === ''){
-        campoInvalido(email,'No puede dejar este campo vacio.');
-    }else if(!esEmail(emailValue)){
-        campoInvalido(email,'Debe ingresar un email válido.');
-    }else{
+    if (emailValue === '') {
+        campoInvalido(email, 'No puede dejar este campo vacio.');
+    } else if (!esEmail(emailValue)) {
+        campoInvalido(email, 'Debe ingresar un email válido.');
+    } else {
         campoValido(email);
     }
 
-    if(mensajeValue === ''){
+    if (mensajeValue === '') {
         campoInvalido(mensaje, 'Ingrese su mensaje por favor.');
-    }else{
+    } else {
         campoValido(mensaje);
     }
 }
 
-function campoInvalido(input, message){
+function campoInvalido(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
     formControl.className = 'form-control error';
     small.innerText = message;
 }
- 
-function campoValido(input){
+
+function campoValido(input) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 }
 
-function esEmail(email){
+function esEmail(email) {
     return /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(email);
+}
+
+function esNombre(nombre) {
+    return /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(nombre);
+}
+
+function esTelefono(telefono) {
+    return /^\d{7,14}$/.test(telefono);
 }

@@ -1,0 +1,12 @@
+-se actualizaron algunas secciones para crear mas consistencia en la información
+-se agregaron dos nuevas secciones para cumplir con los requisitos requeridos en el TPO,
+-nueva seccion ¿Quienes somos?, se agrega para tener mas datos para poder realizar una api mas consisa
+-nueva seccion Ubicación, para utilizar un "iframe", requerido.
+-se crearon tres archivos css nuevos con el nombre de cada sección para tener una mejor legibilidad y referencia a la hora de trabajar en ellos
+-se agregó responsividad a toda la pagina, incorporando mediaqueries a la sección inicio con tres puntos de corte, requerido.
+-se agrego una transición en los botones, requerido.
+-se incorporó css flexbox y grid, requerido
+-se consideró el aspecto de diseño, tipografías, paleta de colores, acorde a la temática de la página.
+-se agregaron cambios al archivo "validacion.js"
+-api: se trabajó con una api local ubicada en la carpeta api-data, con los datos de la página en un archivo JSON,
+se utilizó el metodo async mediante javascript y VUE, y se agregaron tres archivos javascript para las correspondientes secciones en la carpeta api.

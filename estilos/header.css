@@ -1,0 +1,394 @@
+:root{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    display: block;
+    background-color: rgba(89, 156, 178, 0.8);
+}
+
+.lbl-menu {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.lbl-menu #spn1,
+#spn2,
+#spn3 {
+    position: absolute;
+    content: '';
+    background-color: #b4b4b4ef;
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#spn1 {
+    top: 5px;
+}
+
+#spn2 {
+    top: 15px;
+}
+
+#spn3 {
+    top: 25px;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#btn-menu:checked~.lbl-menu #spn1 {
+    transform: rotate(140deg);
+    top: 15px;
+    left: 13px;
+}
+
+#btn-menu:checked~.lbl-menu #spn2 {
+    opacity: 0;
+}
+
+#btn-menu:checked~.lbl-menu #spn3 {
+    transform: rotate(-140deg);
+    top: 15px;
+    left: 13px;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 100%;
+    height: 30px;
+    padding: 12px;
+    padding-bottom: 3px;
+    border: 1px solid #d6d6d6;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(224, 224, 224, 0.5)
+}
+
+.menu {
+    position: fixed;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    border-right: 1px solid rgba(223, 222, 222, 0.5);
+    
+}
+
+.menu li:hover {
+    background-color: rgb(89, 156, 178);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        position: absolute;
+        background: #b5b5b5;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        background-color: #4E94AB;
+        border-top: 1px solid #cccccc;
+    }
+
+    #btn-menu:checked~.menu {
+        margin: 0;
+    }
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inicio {
+    margin: 60px 0px 10px 10px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+}
+
+.inicio h1 span {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 5rem;
+    color: #4E94AB;
+    text-shadow: 13px #000000;
+}
+
+.banner img {
+    max-width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    line-height: 1.5em;
+    font-size: 2rem;
+    margin-left: 80px;
+    margin-bottom: 0;
+    color: #afafaf;
+}
+
+.inicio p {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 80px 10px 10px 80px;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-contrata {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    background-color: #4E94AB;
+}
+
+/*cambio de color al pulsar boton*/
+
+ button:hover { 
+    color: #ffffff;
+    background: linear-gradient(45deg, rgb(99, 207, 246), rgb(151, 221, 213));
+} 
+
+/* ------------Transicion en el botón------------ */
+.btn-shine {
+    position: relative;
+    top: 80%;
+    left: 0%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    /* padding: 5px 13px; */
+    color: #599cb2;
+    background: linear-gradient(to right, #d0d0d0 0, rgb(226, 224, 224) 10%, #ffffff 20%);
+    background-position: 0;
+    -webkit-background-clip: text;     /*esta linea tiene problemas de compatibilidad con ciertos navegadores */
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    white-space: nonwrap;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0px;
+    }
+
+    60% {
+        background-position: 85px;
+    }
+
+    100% {
+        background-position: 120px;
+    }
+}
+
+/* ---------------Quienes somos-------------- */
+
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+} 
+
+#nosotros h2  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 2rem;
+    color:#4E94AB;
+}
+
+#nosotros p{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.7em;
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 50px;
+}
+
+
+/* ------------- telefonos y tablets --------------*/
+@media screen and (max-width: 768px) {
+    #hero {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    } 
+    
+    .inicio { 
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }  
+    
+    .banner{
+        height: 50vh;
+        width: 100%;
+    }
+    .banner img{
+        height: 100%; 
+        width: 100%;
+    } 
+    
+    h1 {
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 1.8em;
+        margin: auto;
+        margin-bottom: 0;
+    }
+    
+    .inicio p {
+        margin: auto;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    
+    .btn-contrata {
+        margin-top: 0px;
+    }    
+}
+
+/* --------------tablet y laptop---------- */
+@media(min-width: 768px) and (max-width: 1024px){
+    #hero {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    } 
+    
+    .inicio { 
+        display: flex;
+        flex-direction: column;
+        height: 35vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }  
+    
+    .banner{
+        height: 50vh;
+        width: 100%;
+    }
+
+    .banner img{
+        height: 100%; 
+        width: 100%;
+    } 
+
+    h1 {
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 1.8em;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    
+    .inicio p {
+        margin: auto;
+        margin-top: 0;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    
+    .btn-contrata {
+        margin-top: 0px;
+    }    
+}
