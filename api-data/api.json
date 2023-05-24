@@ -3,7 +3,7 @@
         "id": 1,
 		"nombre": "Dr. Frio",
 		"descripcion": "Reparaciones de emergencias las 24HS",
-		"background": "../img/banner-base.png",
+		"background": "img/banner-base.png",
         "url":"https://chat.whatsapp.com/LFZoTQftvMpDiYFL2LZS4p"
 	},
 
@@ -16,19 +16,19 @@
 			"id": 3,
 			"titulo": "Automatización y monitoreo de refrigeración",
 			"descripcion": "Mantené el control total con nuestras soluciones en enfriamiento remoto",
-			"imagen": "../img/bak4.png"
+			"imagen": "img/bak4.png"
 		},
 		{
 			"id": 4,
 			"titulo": "Garantía extendida",
 			"descripcion": "Contáctenos para información sobre su garantia o para validar la misma.Informamos que los reportes de garantías también puede realizarlos mediante llamada telefónica sin costo al: 11 2718 - 2954 ",
-			"imagen": "../img/bak33.png"
+			"imagen": "img/bak33.png"
 		},
 		{
 			"id": 5,
 			"titulo": "Refacciones para Cuartos Fríos",
 			"descripcion": "En DR. FRIO contamos con refacciones y accesorios originales de las más prestigiosas marcas del mercado.",
-			"imagen": "../img/bak1.jpg"
+			"imagen": "img/bak1.jpg"
 		}
 	],
 
