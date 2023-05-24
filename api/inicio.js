@@ -1,6 +1,6 @@
 const getInfoInicio = async (id) => {
     try {
-        const respuesta = await fetch('../api-data/api.json')
+        const respuesta = await fetch('api-data/api.json')
         const respuestaJson = await respuesta.json()
 
         console.log(respuestaJson.inicio);
